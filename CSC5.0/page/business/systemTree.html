@@ -1,0 +1,114 @@
+<title>业务系统</title>
+<div class="row">
+	<div class="col-xs-3">
+		<div  class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">业务系统结构</h3></div>
+			<div class="panel-body">
+				<button class="btn btn-info btn-sm">创建业务系统</button>
+				<p></p>
+				<ul id="ProTree" class="ztree">
+				</ul>
+			</div>
+		</div>
+    </div>
+
+	<div class="col-xs-9 system-content-box">
+  		
+	</div>
+
+</div>
+<script>
+
+var scripts = [null,"js/x-editable/bootstrap-editable.js","js/ztree/js/ztree.js","js/ztree/js/ztree.excheck.js",null];
+
+$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
+
+  jQuery(function($) {
+    //editables on first profile page
+    function changeBusiness(url){
+		$(".system-content-box").html('').load(url);
+    }
+    changeBusiness('page/business/system.html');
+    <!--
+    var setting = {
+      check: {
+        enable: false
+      },
+      data: {
+        simpleData: {
+          enable: true
+        }
+      },
+      callback:{
+      	onClick: function(srcEvent, treeId, node, clickFlag){
+	        if(node.url){
+	          changeBusiness(node.url);
+	          srcEvent.preventDefault();
+	        }
+	      }
+	    }
+    };
+
+    var zNodes =[
+    { name:"业务系统目录", 
+      open:true,
+      iconSkin:'tree_root',
+      children: [
+        { 
+          name:"业务域1",
+          open:true,
+          url:"page/business/system.html",
+          iconSkin:'tree_leaf2',
+          children: [
+            { 
+              name:"业务系统1",
+              url:"page/business/sysdetails.html",
+              target:"_self",
+              iconSkin:'tree_leaf2'
+          },
+            { name:"业务系统2",iconSkin:'tree_leaf2'},
+            { name:"业务系统3",iconSkin:'tree_leaf2'},
+            { name:"业务系统4",iconSkin:'tree_leaf2'}
+          ]},
+        { name:"业务域2",
+          iconSkin:'tree_leaf2',
+          children: [
+            { name:"业务系统1",iconSkin:'tree_leaf2'},
+            { name:"业务系统1",iconSkin:'tree_leaf2'},
+            { name:"业务系统1",iconSkin:'tree_leaf2'},
+            { name:"业务系统1",iconSkin:'tree_leaf2'}
+          ]}
+      ]}
+
+      
+  ];;
+    
+    
+    var code;
+    
+    function setCheck() {
+      var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+      py = $("#py").attr("checked")? "p":"",
+      sy = $("#sy").attr("checked")? "s":"",
+      pn = $("#pn").attr("checked")? "p":"",
+      sn = $("#sn").attr("checked")? "s":"",
+      type = { "Y":py + sy, "N":pn + sn};
+      //zTree.setting.check.chkboxType = type;
+      showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+    }
+    function showCode(str) {
+      if (!code) code = $("#code");
+      code.empty();
+      code.append("<li>"+str+"</li>");
+    }
+    $.fn.zTree.init($("#ProTree"), setting, zNodes);
+
+
+
+
+
+  });
+
+});
+
+</script>

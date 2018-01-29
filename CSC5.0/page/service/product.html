@@ -1,0 +1,252 @@
+<title>产品详情</title>
+<link rel="stylesheet" href="js/x-editable/bootstrap-editable.css" />
+<div class="main-first-tab" id="serviceProductTab">
+
+	<div class="btn-box">
+		<form class="form-inline">
+			<a type="button" class="btn btn-info" id="pro-edit" href="index.html#page/service/productlist-add-steps">修改</a>
+			<button type="button" class="btn btn-success" id="pro-online">发布</button>
+			<button type="button" class="btn btn-danger" id="pro-offline">下线</button>
+			<button type="button" class="btn btn-white" id="pro-distroy">销毁</button>
+		</form>
+	</div>
+	
+	<div class="row" style="margin-top: 20px;"> 
+	   <div class="col-xs-4">
+	      <div class="panel panel-default"> 
+	         <div class="panel-heading"><h3 class="panel-title">基本信息</h3></div> 
+	         <div class="panel-body"> 
+	         	<table class="simple_form_table">
+			      <tbody id="">
+			        <tr>
+			          <td class="labelField">服务名称：<span>power22ww22</span></td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">计费方式：<span>小时计费</span></td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">计费价格：<span>5.2 元/小时</span></td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">服务状态：<span>已发布</span></td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">生效时间：<span>2015-08-29 10:00:00</span></td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">失效时间：<span>2015-08-29 10:00:00</span></td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">最后更新时间：<span>2015-08-29 10:00:00</span></td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">服务简介：<span>过是古时候后市公司该公司横说竖说是件好事驾驶室过是古时候后市公司该公司横说竖说是件好事驾驶室。</span></td>
+			        </tr>
+			        
+			      </tbody>
+			    </table>
+	         </div> 
+	      </div> 
+
+	      <div class="panel panel-default"> 
+	         <div class="panel-heading"><h3 class="panel-title">服务介绍</h3></div> 
+	         <div class="panel-body">
+
+	         	<span class="editable" id="info">领先的云计算服务提供商，1400000用户正在享受云宏"稳定，安全，低成本"的产品服务，金牌服务:故障100赔偿，免费快速备案，7x24小时售后，云服务器只选云宏。</span>
+
+	         </div> 
+	      </div> 
+	   </div>
+
+	   <div class="col-xs-4"> 
+	      <div class="panel panel-default"> 
+	         <div class="panel-heading"><h3 class="panel-title">服务资源</h3></div> 
+	         <div class="panel-body"> 
+	           <table class="simple_form_table">
+			      <tbody id="">
+			        <tr>
+			          <td class="labelField">资源名称：</td>
+			          <td class="valueField">caojun123eshi</td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">资源类型：</td>
+			          <td class="valueField">云主机</td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">CPU：</td>
+			          <td class="valueField">2核</td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">内存容量：</td>
+			          <td class="valueField">2G</td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">硬盘大小：</td>
+			          <td class="valueField">6G</td>
+			        </tr>
+			        <tr>
+			          <td class="labelField">操作系统：</td>
+			          <td class="valueField">OTHERS</td>
+			        </tr>
+			        
+			      </tbody>
+			   </table>
+	         </div> 
+	      </div> 
+
+	      <div class="panel panel-default"> 
+	         <div class="panel-heading"><h3 class="panel-title">技术参数</h3></div> 
+	         <div class="panel-body"> 
+	           
+				<span class="editable" id="parameter">领先的云计算服务提供商，1400000用户正在享受云宏"稳定，安全，低成本"的产品服务，金牌服务:故障100赔偿，免费快速备案，7x24小时售后，云服务器只选云宏。</span>
+	         				 
+	         </div> 
+	      </div> 
+	   </div>
+
+	   <div class="col-xs-4"> 
+	      <div class="panel panel-default"> 
+	         <div class="panel-heading"><h3 class="panel-title">发布范围</h3></div> 
+	         <div class="panel-body"> 
+	            <ul id="ProTree" class="ztree">
+	            </ul>
+	         </div> 
+	      </div> 
+
+	      <div class="panel panel-default"> 
+	         <div class="panel-heading"><h3 class="panel-title">服务帮助</h3></div> 
+	         <div class="panel-body"> 
+
+	           <span class="editable" id="help">领先的云计算服务提供商，1400000用户正在享受云宏"稳定，安全，低成本"的产品服务，金牌服务:故障100赔偿，免费快速备案，7x24小时售后，云服务器只选云宏。</span>
+
+	         </div> 
+	      </div> 
+	   </div>
+
+	</div>
+
+</div>
+
+<script>
+
+var scripts = [null,"js/x-editable/bootstrap-editable.js","js/ztree/js/ztree.js","js/ztree/js/ztree.excheck.js",null];
+
+$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
+
+	jQuery(function($) {
+		//editables on first profile page
+		$.fn.editable.defaults.mode = 'inline';
+		$.fn.editableform.loading = "<div class='editableform-loading'><i class='ace-icon fa fa-spinner fa-spin fa-2x light-blue'></i></div>";
+	    $.fn.editableform.buttons = '<button type="submit" class="btn btn-info editable-submit"><i class="ace-icon fa fa-check"></i></button>'+
+	                                '<button type="button" class="btn editable-cancel"><i class="ace-icon fa fa-times"></i></button>';    
+
+		
+		//text editable
+	    $('#info')
+		.editable({
+			type: 'textarea',
+			name: 'info',
+			inputclass:'info_textarea',
+			success: function(response, newValue) {
+			}
+	    });
+	    $('#parameter')
+		.editable({
+			type: 'textarea',
+			name: 'parameter',
+			inputclass:'parameter_textarea',
+			success: function(response, newValue) {
+			}
+	    });
+	    $('#help')
+		.editable({
+			type: 'textarea',
+			name: 'help',
+			inputclass:'help_textarea',
+			success: function(response, newValue) {
+			}
+	    });
+
+
+		<!--
+		var setting = {
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"随意勾选 1", open:true,iconSkin:'tree_leaf'},
+			{ id:11, pId:1, name:"随意勾选 1-1", open:true,iconSkin:'tree_leaf'},
+			{ id:111, pId:11, name:"随意勾选 1-1", open:true,iconSkin:'tree_leaf'},
+			{ id:12, pId:1, name:"随意勾选 1-2", open:true,iconSkin:'tree_leaf'},
+			{ id:2, pId:0, name:"随意勾选 2", open:true,iconSkin:'tree_leaf'},
+			{ id:21, pId:2, name:"随意勾选 2-1",iconSkin:'tree_leaf'},
+			{ id:22, pId:2, name:"随意勾选 2-2", open:true,iconSkin:'tree_leaf'},
+			{ id:23, pId:2, name:"随意勾选 2-3",iconSkin:'tree_leaf'}
+		];
+		
+		
+		var code;
+		
+		function setCheck() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			py = $("#py").attr("checked")? "p":"",
+			sy = $("#sy").attr("checked")? "s":"",
+			pn = $("#pn").attr("checked")? "p":"",
+			sn = $("#sn").attr("checked")? "s":"",
+			type = { "Y":py + sy, "N":pn + sn};
+			//zTree.setting.check.chkboxType = type;
+			showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+		}
+		function showCode(str) {
+			if (!code) code = $("#code");
+			code.empty();
+			code.append("<li>"+str+"</li>");
+		}
+		
+		$.fn.zTree.init($("#ProTree"), setting, zNodes);
+		setCheck();
+		$("#py").bind("change", setCheck);
+		$("#sy").bind("change", setCheck);
+		$("#pn").bind("change", setCheck);
+		$("#sn").bind("change", setCheck);
+
+		//-->
+	
+		$(".pro-online").on(ace.click_event, function() {
+			bootbox.confirm("确定执行发布操作?", function(result) {
+				if(result) {
+					//
+				}
+			});
+		});
+
+		$(".pro-offline").on(ace.click_event, function() {
+			bootbox.confirm("确定执行下线操作?", function(result) {
+				if(result) {
+					//
+				}
+			});
+		});
+
+		$(".pro-distroy").on(ace.click_event, function() {
+			bootbox.confirm("确定执行销毁操作?", function(result) {
+				if(result) {
+					//
+				}
+			});
+		});
+
+	});
+
+});
+
+</script>
+
+

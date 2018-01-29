@@ -1,0 +1,384 @@
+<title>创建服务 --CSC</title>
+<link type="text/css" rel="stylesheet" href="js/daterange/daterangepicker_new.css" />
+<link rel="stylesheet" type="text/css" href="js/ztree/css/ztree.css" />
+<link rel="stylesheet" type="text/css" href="js/fuelux/wizard.css" />
+
+
+<div class="widget-box panel panel-default">
+			<div class="widget-header widget-header-blue widget-header-flat panel-heading">
+				<h3 class="widget-title lighter panel-title">添加服务</h3>
+			</div>
+
+			<div class="widget-body">
+				<div class="widget-main">
+					<!-- #section:plugins/fuelux.wizard -->
+					<div id="fuelux-wizard-container">
+						<div>
+							<!-- #section:plugins/fuelux.wizard.steps -->
+							<ul class="steps">
+								<li data-step="1" class="active">
+									<span class="step">1</span>
+									<span class="title">基本信息</span>
+								</li>
+
+								<li data-step="2">
+									<span class="step">2</span>
+									<span class="title">服务资源</span>
+								</li>
+
+								<li data-step="3">
+									<span class="step">3</span>
+									<span class="title">服务价格</span>
+								</li>
+
+								<li data-step="4">
+									<span class="step">4</span>
+									<span class="title">展示信息</span>
+								</li>
+							</ul>
+
+							<!-- /section:plugins/fuelux.wizard.steps -->
+						</div>
+
+						<hr />
+
+						<!-- #section:plugins/fuelux.wizard.container -->
+						<div class="step-content pos-rel" style="min-height:328px;">
+							<div class="step-pane active" data-step="1">
+								<form class="form-horizontal" id="sample-form">
+									<table class="steps-table" width="100%">
+								      <tbody id="">
+								        <tr>
+								          <td class="col-xs-3 text-right">服务类型：</td>
+								          <td class="col-xs-3 text-left">
+								          	<select name="select" class="form-control" ng-model="select" required ng-change="step1.select.$valid ? (steps.percent=30) : (steps.percent=20)">
+								          		<option value="0">请选择服务类型</option>
+								          		<option value="1">云主机</option>
+								          		<option value="2">云硬盘</option>
+								          	</select>
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								        <tr height="10"></tr>
+								        <tr>
+								          <td class="col-xs-3 text-right">服务名称：</td>
+								          <td class="col-xs-3 text-left">
+								          	<input type="text" name="sname" class="form-control" ng-model="sname" required />
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								        <tr height="10"></tr>
+								        <tr>
+								          <td class="col-xs-3 text-right">服务目录：</td>
+								          <td class="col-xs-3 text-left">
+								          	<div class="form-group has-feedback" style="margin:0;">
+											      <div class="input-group">
+											        <span class="input-group-addon"><i class="fa fa-folder"></i></span>
+											        <input name="foldcatalog" type="text" class="form-control" required />
+													<div class="folder-showbox" style="display:none;">
+														<ul class="ztree"></ul>
+												    </div>
+											      </div>
+											</div>
+								          </td>
+								          <td class="text-danger mustfill"></td>
+								        </tr>
+								        <tr height="10"></tr>
+								        <tr>
+								        	<td class="col-xs-3 text-right">服务简介：</td>
+								            <td class="col-xs-3 text-left" colspan="2">
+								            	<textarea style="width:60%;min-width:300px;" rows="6" required></textarea>
+								            </td>
+								        </tr>
+								        <tr height="5"></tr>
+								        <tr>
+								          <td class="col-xs-3 text-right">有效期限：</td>
+								          <td class="col-xs-3 text-left">
+								          	<p class="input-group" id="ps-timeset">
+								              <span class="input-group-btn">
+								                <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+								              </span>
+								              <input type="text" name="pstime" class="form-control" readonly="readonly" required />
+								            </p>
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								        
+								      </tbody>
+								    </table>
+								</form>
+							</div>
+
+							<div class="step-pane" data-step="2">
+								<form name="step2" class="form-validation">
+							        <table class="steps-table" width="100%">
+								      <tbody id="">
+								      	<tr>
+								          <td class="col-xs-3 text-right">数据中心：</td>
+								          <td class="col-xs-3 text-left">
+								          	<select class="form-control">
+								          		<option value="0">102</option>
+								          		<option value="1">103</option>
+								          	</select>
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								        <tr height="10"></tr>
+								        <tr>
+								          <td class="col-xs-3 text-right">虚拟化平台：</td>
+								          <td class="col-xs-3 text-left">
+								          	<select class="form-control">
+								          		<option value="0">请选择虚拟化平台</option>
+								          		<option value="1">winserver</option>
+								          		<option value="2">PowerVM</option>
+								          		<option value="2">VMware</option>
+								          	</select>
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								        <tr height="10"></tr>
+										<tr>
+								          <td class="col-xs-3 text-right">资源名称：</td>
+								          <td class="col-xs-3 text-left">
+								          	<select class="form-control" id="pro-add-reschange">
+								          		<option value="0">请选择资源模板</option>
+								          		<option value="1">模板121212</option>
+								          		<option value="2">模板啊啊U我asdasd</option>
+								          		<option value="2">VMware</option>
+								          	</select>
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								      </tbody>
+								      <tbody class="form-inline" style="font-size:12px;display:none;" id="pro-add-reschild">
+								        <tr>
+								          <td class="col-xs-3 text-right"></td>
+								          <td class="text-left" colspan="2">
+								          	<table>
+								          		<tr>
+								          			<td>操作系统：</td>
+								          			<td>Red Hat Enterprise Linux Server release 6.0 (Santiago)</td>
+								          			<td></td>
+								          		</tr>
+								          		<tr height="10"></tr>
+								          		<tr>
+								          			<td>CPU个数：</td>
+													<td><input type="text" name="sname" class="form-control" ng-model="sname" required /> 个 <span class="text-danger mustfill">*</span></td>
+								          		</tr>
+								          		<tr height="10"></tr>
+								          		<tr>
+								          			<td>内存容量：</td>
+													<td><input type="text" name="sname" class="form-control" ng-model="sname" required /> G <span class="text-danger mustfill">*</span></td>
+								          		</tr>
+								          		<tr height="10"></tr>
+								          		<tr>
+								          			<td>磁盘大小：</td>
+													<td><input type="text" name="sname" class="form-control" ng-model="sname" required /> G <span class="text-danger mustfill">*</span></td>
+								          		</tr>
+								          	</table>
+								          </td>
+								        </tr>
+								      </tbody>
+								    </table>
+								</form>
+							</div>
+
+							<div class="step-pane" data-step="3">
+								<form name="step3" class="form-validation">
+							        <table class="steps-table" width="100%">
+								      <tbody id="">
+								      	<tr>
+								          <td class="col-xs-3 text-right">服务计费方式：</td>
+								          <td class="col-xs-3 text-left">
+								          	<select class="form-control">
+								          		<option value="0">小时计费</option>
+								          		<option value="1">包月计费</option>
+								          	</select>
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								        <tr height="10"></tr>
+								        <tr>
+								          <td class="col-xs-3 text-right">服务价格：</td>
+								          <td class="col-xs-3 text-left">
+								          	<input type="text" name="" class="form-control" disabled value="每小时68元" />
+								          </td>
+								          <td class="text-danger mustfill">*</td>
+								        </tr>
+								      </tbody>
+								    </table>
+								</form>
+							</div>
+
+							<div class="step-pane" data-step="4">
+								<form name="step4" class="form-validation">
+							        <table class="steps-table" width="100%">
+								      <tbody id="">
+								      	<tr>
+								          <td class="col-xs-3 text-right">服务介绍：</td>
+								          <td class="col-xs-3 text-left">
+								          	<textarea name="" id="" class="form-control" cols="80" rows="3" placeholder="点我进行编辑"></textarea>
+								          </td>
+								          <td></td>
+								        </tr>
+								        <tr height="10"></tr>
+								        <tr>
+								          <td class="col-xs-3 text-right">技术参数描述：</td>
+								          <td class="col-xs-3 text-left">
+								          	<textarea name="" id="" class="form-control" cols="80" rows="3" placeholder="点我进行编辑"></textarea>
+								          </td>
+								          <td></td>
+								        </tr>
+								        <tr height="10"></tr>
+								        <tr>
+								          <td class="col-xs-3 text-right">服务帮助描述：</td>
+								          <td class="col-xs-3 text-left">
+								          	<textarea name="" id="" class="form-control" cols="80" rows="3" placeholder="点我进行编辑"></textarea>
+								          </td>
+								          <td></td>
+								        </tr>
+								      </tbody>
+								    </table>
+							      </form>
+							</div>
+						</div>
+
+						<!-- /section:plugins/fuelux.wizard.container -->
+					</div>
+
+					<hr />
+					<div class="wizard-actions">
+						<!-- #section:plugins/fuelux.wizard.buttons -->
+						<button class="btn btn-prev">
+							<i class="ace-icon fa fa-arrow-left"></i>
+							上一步
+						</button>
+
+						<button class="btn btn-info btn-next" data-last="完成">
+							下一步
+							<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+						</button>
+
+						<!-- /section:plugins/fuelux.wizard.buttons -->
+					</div>
+
+					<!-- /section:plugins/fuelux.wizard -->
+				</div><!-- /.widget-main -->
+			</div><!-- /.widget-body -->
+		</div>
+
+
+<script type="text/javascript">
+	var scripts = [null,"js/fuelux/fuelux.wizard.js","js/select2.js","js/daterange/date.js","js/daterange/moment.js","js/daterange/daterangepicker_new.js","js/ztree/js/ztree.js", null]
+	$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
+	  //inline scripts related to this page
+		jQuery(function($) {
+			
+			/*steps*/
+			$('[data-rel=tooltip]').tooltip();
+			$(".select2").css('width','200px').select2({allowClear:true})
+			.on('change', function(){
+				$(this).closest('form').validate().element($(this));
+			}); 
+		
+			var $validation = false;
+			$('#fuelux-wizard-container')
+			.ace_wizard({
+				//step: 2 //optional argument. wizard will jump to step "2" at first
+				//buttons: '.wizard-actions:eq(0)'
+			})
+			.on('actionclicked.fu.wizard' , function(e, info){
+				if(info.step == 1 && $validation) {
+					if(!$('#validation-form').valid()) e.preventDefault();
+				}
+			})
+			.on('finished.fu.wizard', function(e) {
+				bootbox.dialog({
+					message: "Thank you! Your information was successfully saved!", 
+					buttons: {
+						"success" : {
+							"label" : "OK",
+							"className" : "btn-sm btn-primary"
+						}
+					}
+				});
+			}).on('stepclick.fu.wizard', function(e){
+				//e.preventDefault();//this will prevent clicking and selecting steps
+			});
+			/*steps*/
+
+
+			/*timepicker*/
+			$('#ps-timeset').daterangepicker(
+				{
+					startDate: Date.today().add({ months: -1 }),
+					format: "YYYY-MM-DD",
+			 		showDropdowns: true
+				}, 
+				cb = function(start, end) {
+					if(start == null) start = Date.today().add({ months: -1 });
+					if(end == null) end = Date.today().add({ months: -1,day: +1 });
+			    	$('input[name=pstime]').val(start.format('YYYY-MM-DD') + ' 至 ' + end.format('YYYY-MM-DD'));//至
+				}
+			);
+			/*timepicker*/
+
+			/*foldtree*/
+			var outofinput = true;
+			function buildFoldtree(){
+				var setting = {
+					check: {
+						enable: true
+					},
+					data: {
+						simpleData: {
+							enable: true
+						}
+					},
+					callback:{
+						onClick:function(event, treeId, treeNode, clickFlag){
+							alert()
+							$("input[name=foldcatalog]").val(treeNode.name);
+							$(".folder-showbox").hide();
+						}
+					}
+				};
+
+				var zNodes =[
+					{ id:1, pId:0, name:"随意勾选 1", open:true},
+					{ id:11, pId:1, name:"随意勾选 1-1", open:true},
+					{ id:111, pId:11, name:"随意勾选 1-1", open:true},
+					{ id:12, pId:1, name:"随意勾选 1-2", open:true},
+					{ id:2, pId:0, name:"随意勾选 2", open:true},
+					{ id:21, pId:2, name:"随意勾选 2-1"},
+					{ id:22, pId:2, name:"随意勾选 2-2", open:true},
+					{ id:23, pId:2, name:"随意勾选 2-3"}
+				];
+				$(".ztree").html('');
+				$.fn.zTree.init($(".ztree"), setting, zNodes);
+			}
+
+			$("input[name=foldcatalog]").bind("click",function() {
+				$(".folder-showbox").show();
+				buildFoldtree();
+				setTimeout(function(){outofinput = false;},100);
+			});
+
+			$(document).bind("click",function(e){
+				var target = $(e.target);
+				if(target.closest(".folder-showbox").length == 0){
+					outofinput = true;
+					setTimeout(function(){
+						if(outofinput) $(".folder-showbox").hide();
+					},200);
+				}
+			});
+			/*foldtree*/
+
+			$("#pro-add-reschange").change(function(event) {
+				$("#pro-add-reschild").show();
+			});
+
+		});
+	});
+</script>

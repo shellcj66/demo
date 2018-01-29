@@ -1,0 +1,280 @@
+<title>自定义服务申请 --CSC</title>
+<link rel="stylesheet" type="text/css" href="js/fuelux/wizard.css" />
+<style>
+	.mb30{margin-bottom: 20px;}
+</style>
+<div class="widget-box panel panel-default">
+	<div class="widget-header widget-header-blue widget-header-flat panel-heading">
+		<h3 class="widget-title lighter panel-title">申请服务</h3>
+	</div>
+	<div class="widget-body">
+		<div class="widget-main">
+			<!-- #section:plugins/fuelux.wizard -->
+			<div id="fuelux-wizard-container">
+				<div>
+					<!-- #section:plugins/fuelux.wizard.steps -->
+					<ul class="steps">
+						<li data-step="1" class="active">
+							<span class="step">1</span>
+							<span class="title">云主机基本信息</span>
+						</li>
+
+						<li data-step="2">
+							<span class="step">2</span>
+							<span class="title">分区设置</span>
+						</li>
+
+						<li data-step="3">
+							<span class="step">3</span>
+							<span class="title">软件安装</span>
+						</li>
+
+					</ul>
+
+					<!-- /section:plugins/fuelux.wizard.steps -->
+				</div>
+
+				<div style="padding:20px;padding-bottom:30px;margin:20px 10px;background:#fafafa;border:1px solid #ededed;border-radius:2px;">
+					<div class="pull-left col-xs-2" style="min-width:100px;height:100px;border-right:1px dashed #e3e3e3;">
+						<img src="images/winhost.png" width="80%" style="max-width:120px;">
+					</div>
+
+					<div class="pull-left col-xs-10">
+						<div class="row mb30">
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-3">
+								<div class="mb30">
+									<span class="text-muted">服务：</span> 68vm-linux
+								</div>
+								<div>
+									<span class="text-muted">CPU：</span> 1核
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="mb30">
+									<span class="text-muted">计费方式：</span> 小时计费
+								</div>
+								<div>
+									<span class="text-muted">内存：</span> 2G
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="mb30">
+									<span class="text-muted">计费价格：</span> 21.70元/时
+								</div>
+								<div>
+									<span class="text-muted">云硬盘：</span> 18G
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-1">
+							</div>
+							<div class="col-xs-11">
+								<div>
+									<span class="text-muted">操作系统：</span> Red Hat Enterprise Linux 6 (64位)
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<!-- #section:plugins/fuelux.wizard.container -->
+				<div class="step-content pos-rel">
+					<div class="step-pane active" data-step="1">
+						<div class="panel-group">
+							<div class="panel-group-inbox">
+								<div class="panel panel-default w320"> 
+									<div class="panel-heading"><h3 class="panel-title">序号：1</h3></div> 
+									<div class="panel-body form-horizontal" style="padding:15px 20px 0 15px;">
+										<div class="form-group">
+											<label class="control-label col-xs-4">虚拟机名称：</label>
+											<div class="col-xs-8">
+												<input type="text" class="form-control input-sm" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-4">业务系统：</label>
+											<div class="col-xs-8">
+												<select class="form-control input-sm">
+													<option>业务系统一</option>
+													<option>业务系统二</option>
+													<option>业务系统三</option>
+													<option>业务系统四</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-4">IP池：</label>
+											<div class="col-xs-8">
+												<select class="form-control input-sm">
+													<option>68ip池</option>
+													<option>681ip池</option>
+													<option>682ip池</option>
+													<option>683ip池</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-4">服务类型：</label>
+											<div class="col-xs-8">
+												<select class="form-control input-sm">
+													<option>App</option>
+													<option>web</option>
+													<option>ipad</option>
+													<option>android</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-4">虚拟机用途：</label>
+											<div class="col-xs-8">
+												<input type="text" class="form-control input-sm" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-4">申请时长：</label>
+											<div class="col-xs-8" style="font-size:12px;">
+												<div class="form-inline">
+													<input type="radio" class="form-control" />
+													<input type="text" class="form-control input-sm" style="width:103px;display:inline-block"> 
+													<select class="form-control input-sm" style="width:70px;display:inline-block">
+														<option>年</option>
+														<option>月</option>
+														<option>日</option>
+													</select>
+												</div>
+												<div class="form-inline">
+													<input type="radio" class="form-control" />
+													有效期至：
+													    <div class="input-group" style="width:118px;">
+													      <input type="text" class="form-control input-sm">
+													      <div class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></div>
+													    </div>
+												</div>
+												<div class="form-inline">
+													<input type="radio" class="form-control" />
+													永久
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="step-pane" data-step="2">
+						<div class="radio">
+							<label class="i-checks">
+								<input type="radio" name="a" value="option2" checked />
+								<i></i>
+								默认分区
+							</label>
+						</div>
+						<div class="radio">
+							<label class="i-checks">
+								<input type="radio" name="a" value="option2" />
+								<i></i>
+								Option 2
+							</label>
+						</div>
+					</div>
+
+					<div class="step-pane" data-step="3">
+						<button class="btn btn-success pull-right">添加软件</button>
+						<div class="radio">
+							<label class="i-checks">
+								<input type="radio" name="b" value="option2" checked />
+								<i></i>
+								批量安装
+							</label>
+							<label class="i-checks">
+								<input type="radio" name="b" value="option2" />
+								<i></i>
+								个性化安装
+							</label>
+						</div>
+						<table class="table table-bordered table-striped">
+							<thead>
+								<th>软件名称</th>
+								<th>版本</th>
+								<th>适用操作系统</th>
+								<th>适用架构</th>
+								<th>静默安装属性</th>
+								<th>软件类型</th>
+								<th>操作</th>
+							</thead>
+							<tbody>
+								<tr class="ng-scope ng-isolate-scope">
+									<td width=150>DB2linux10532</td>
+									<td>10.5</td>
+									<td>linux</td>
+									<td>x86 x64</td>
+									<td><a href="">查看</a> <a href="">修改</a></td>
+									<td>DB2</td>
+									<td><a href="">删除</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+
+				<!-- /section:plugins/fuelux.wizard.container -->
+			</div>
+
+			<hr />
+			<div class="wizard-actions">
+				<!-- #section:plugins/fuelux.wizard.buttons -->
+				<button class="btn btn-prev">
+					<i class="ace-icon fa fa-arrow-left"></i>
+					上一步
+				</button>
+
+				<button class="btn btn-info btn-next" data-last="完成">
+					下一步
+					<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+				</button>
+
+				<!-- /section:plugins/fuelux.wizard.buttons -->
+			</div>
+
+			<!-- /section:plugins/fuelux.wizard -->
+		</div><!-- /.widget-main -->
+	</div><!-- /.widget-body -->
+</div>
+<script type="text/javascript">
+	var scripts = [null,"js/fuelux/fuelux.wizard.js", null];
+	$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
+
+		var panel = $(".panel-group-inbox").html();
+		for(var i = 0; i < 9; i++){
+			$(".panel-group-inbox").append(panel);
+		}
+		$(".panel-group-inbox").width(340*10+20);
+
+
+		var $validation = false;
+		$('#fuelux-wizard-container').ace_wizard({}).on('actionclicked.fu.wizard' , function(e, info){
+			if(info.step == 1 && $validation) {
+				if(!$('#validation-form').valid()) e.preventDefault();
+			}
+		}).on('finished.fu.wizard', function(e) {
+			bootbox.dialog({
+				message: "Thank you! Your information was successfully saved!", 
+				buttons: {
+					"success" : {
+						"label" : "OK",
+						"className" : "btn-sm btn-primary"
+					}
+				}
+			});
+		}).on('stepclick.fu.wizard', function(e){
+
+		});
+	});
+</script>

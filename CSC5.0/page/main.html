@@ -1,0 +1,1071 @@
+<title>首页 --CSC</title>
+<div class="row resource_summary"> 
+   <div class="col-xs-6"> 
+      <div class="panel panel-default"> 
+         <div class="panel-heading"><h3 class="panel-title">业务资源</h3></div> 
+         <div class="panel-body"> 
+            <div class="row-fluid"> 
+               <div class="col-xs-3"> 
+                  <strong id="index_operation_businesssystem_Total">11</strong> 
+                  <p><span class="businesssystem">业务系统</span></p> 
+               </div> 
+               <div class="col-xs-3"> 
+                  <strong id="index_operation_vm_Total">3</strong> 
+                  <p><span class="vm">云主机</span></p>                    
+               </div> 
+               <div class="col-xs-3"> 
+                  <strong id="index_operation_vdisk_Total">10</strong> 
+                  <p><span class="vdisk">云硬盘</span></p> 
+               </div> 
+               <div class="col-xs-3"> 
+                  <strong id="index_operation_users_Total">17</strong> 
+                  <p><span class="users">用户</span></p> 
+               </div> 
+            </div> 
+         </div> 
+      </div> 
+   </div> 
+   <div class="col-xs-6"> 
+      <div class="panel panel-default"> 
+         <div class="panel-heading"><h3 class="panel-title">中心资源</h3></div> 
+         <div class="panel-body"> 
+            <div class="row-fluid"> 
+               <div class="col-xs-2" style="width:20%;"> 
+                  <strong id="index_operation_datacenter_Total">2</strong> 
+                  <p><span class="datacenter">数据中心</span></p> 
+               </div> 
+               <div class="col-xs-2" style="width:20%;"> 
+                  <strong id="index_operation_resourcepool_Total">6</strong> 
+                  <p><span class="resourcepool">资源池</span></p> 
+               </div> 
+               <div class="col-xs-2" style="width:20%;"> 
+                  <strong id="index_operation_storagepool_Total">28</strong> 
+                  <p><span class="storagepool">存储池</span></p> 
+               </div> 
+               <div class="col-xs-2" style="width:20%;"> 
+                  <strong id="index_operation_host_Total">10</strong> 
+                  <p><span class="host">物理机</span></p> 
+               </div> 
+               <div class="col-xs-2" style="width:20%;"> 
+                  <strong id="index_operation_ippool_Total">6</strong> 
+                  <p><span class="ippool">IP池</span></p> 
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="row"> 
+	<div class="col-xs-6">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">配额信息</h3></div>
+			<div class="panel-body row">
+				<div class="col-xs-4">
+					<div id="hchart-pie1" style="height:220px;"></div>
+				</div>
+				<div class="col-xs-4">
+					<div id="hchart-pie2" style="height:220px;"></div>
+				</div>
+				<div class="col-xs-4">
+					<div id="hchart-pie3" style="height:220px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6" > 
+		<div class="panel panel-default"> 
+			<div class="panel-heading"> 
+				<h3 class="panel-title">我的待办</h3> 
+			</div> 
+			<div id="index_operation_notices" class="panel-body" style="height:250px;"> 
+				<div style=" overflow-x: hidden;overflow-y: auto;word-break: break-all;"> 
+					<div class="main-list"> 
+						<table border="0" cellspacing="0" cellpadding="0" width="100%" style="font-size: 14px"> 
+							<tbody> 
+								<tr> 
+									<td align="left"> 
+										<p style="margin-left: 5px;"> 
+											<a href="index.html">· 待审核订单  &nbsp;<span id="operation_oapprovaling" class="float-right" style="color:#1f7ed0;">10</span></a> 
+										</p> 
+									</td></tr> 
+									<tr><td> 
+										<p style="margin-left: 5px;"> 
+											<a href="index.html">· 施工待办 &nbsp;<span id="operation_oconstructioning" class="float-right" style="color:#1f7ed0;">10</span></a> 
+										</p> 
+									</td></tr>                  
+									<tr><td> 
+										<p style="margin-left: 5px;"> 
+											<a href="index.html">· 施工失败 &nbsp;<span id="operation_oconstructionfail" class="float-right" style="color:#1f7ed0;">4</span></a> 
+										</p> 
+									</td></tr> 
+									<tr><td> 
+										<p style="margin-left: 5px;"> 
+											<a href="index.html">· 待回收资源 &nbsp;<span id="operation_expiredtodelete" class="float-right" style="color:#1f7ed0;">0</span></a> 
+										</p> 
+									</td>    
+								</tr>                               
+							</tbody> 
+						</table> 
+					</div> 
+				</div> 
+			</div>         
+		</div> 
+	</div> 
+</div>
+
+
+<div class="row"> 
+	<div class="col-xs-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">最新通知
+					<a href="#">更多</a>
+				</h3>
+			</div>
+			<div class="panel-body" style="height:210px;overflow-y:auto;">
+				<div class="main-list"> 
+					<table border="0" cellspacing="0" cellpadding="0" width="100%" style="font-size: 14px"> 
+						<tbody> 
+							<tr> 
+								<td align="left"> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· <span class="text-danger">( 服务到期 )</span>服务lpp云主机在2015-09-07 16:59已过期
+						<span class="text-right float-right text-danger">未读</span></a> 
+									</p> 
+								</td></tr> 
+								<tr><td> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· <span class="text-success">( 审核通过 )</span>您在2015-09-07 12:23申请的订单，订单号为OS2015090741412352，已经审核通过
+						<span class="text-right float-right text-success">已读</span></a> 
+									</p> 
+								</td></tr>                  
+								<tr><td> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· <span class="text-success">( 审核通过 )</span>您在2015-09-07 12:23申请的订单，订单号为OS2015090741412352，已经审核通过
+						<span class="text-right float-right text-success">已读</span></a> 
+									</p> 
+								</td></tr> 
+								<tr><td> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· <span class="text-danger">( 服务到期 )</span>服务lpp云主机在2015-09-07 16:59已过期
+						<span class="text-right float-right text-success">已读</span></a></a> 
+									</p> 
+								</td>    
+							</tr>                               
+						</tbody> 
+					</table> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">最近订单
+					<a href="#">更多</a>
+				</h3>
+			</div>
+			<div class="panel-body" style="height:210px;overflow-y:auto;">
+				<div class="main-list"> 
+					<table border="0" cellspacing="0" cellpadding="0" width="100%" style="font-size: 14px"> 
+						<tbody> 
+							<tr> 
+								<td align="left"> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· D20150910214348712 服务实例1251
+						<span class="text-right float-right text-warning">待审核</span></a> 
+									</p> 
+								</td>
+							</tr> 
+							<tr>
+								<td> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· D20150910214348712 服务实例1251
+						<span class="text-right float-right text-success">审核通过</span></a> 
+									</p> 
+								</td>
+							</tr>                  
+							<tr>
+								<td> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· D20150910214348712 服务实例1251
+						<span class="text-right float-right text-danger">审核未通过</span></a> 
+									</p> 
+								</td>
+							</tr>
+							<tr>
+								<td> 
+									<p style="margin-left: 5px;"> 
+										<a href="index.html">· D20150910214348712 服务实例1251
+						<span class="text-right float-right text-danger">审核未通过</span></a> 
+									</p> 
+								</td>
+							</tr>                 
+						</tbody> 
+					</table> 
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-8">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">产品统计</h3></div>
+			<div class="panel-body row">
+				<div class="col-xs-6">
+					<div id="hchart-column1" style="height:220px;"></div>
+				</div>
+				<div class="col-xs-6">
+					<div id="hchart-column2" style="height:220px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">资源分布统计</h3></div>
+			<div class="panel-body">
+				<div id="hchart-column3" style="height:220px;"></div>
+			</div>
+		</div>
+	</div>                 
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">产品统计</h3>
+			</div>
+			<div class="panel-body row">
+				<select class="form-control floatright" style="width:80px">
+				  <option>2015</option>
+				  <option>2014</option>
+				  <option>2013</option>
+				  <option>2012</option>
+				</select>
+				<div class="clear"></div>
+				<div class="col-xs-6">
+					<div id="hchart-line1" style="height:220px;"></div>
+				</div>
+				<div class="col-xs-6">
+					<div id="hchart-line2" style="height:220px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">业务系统资源统计</h3></div>
+			<div class="panel-body">
+				<div id="hchart-column4" style="height:220px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-8">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">总体告警统计</h3></div>
+			<div class="panel-body">
+				<div class="col-xs-6">
+					<div id="hchart-column5" style="height:220px;"></div>
+				</div>
+				<div class="col-xs-6">
+					<div id="hchart-column6" style="height:220px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">最近告警</h3></div>
+			<div class="panel-body">
+				<table width="100%" height="220">
+					<tbody class="lately-warning-table">
+						<tr>
+							<td>2015-09-17</td>
+							<td>云主机告警</td>
+							<td>ll123</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="text-danger"><i class="fa fa-exclamation-triangle"></i>虚拟机'll123'在主机'winserver-117'上恢复(uuid:302224a9-1993-4692-88e8-5fcssh234djs)</span></td>
+						</tr>
+						<tr>
+							<td>2015-09-17</td>
+							<td>云主机告警</td>
+							<td>ll123</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="text-danger"><i class="fa fa-exclamation-triangle"></i>虚拟机'll123'被销毁(uuid:302224a9-1993-4692-88e8-5fcssh234djs)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title">告警统计TOP10</h3></div>
+			<div class="panel-body">
+				<div class="tabtable tab-container">
+					<ul class="nav nav-tabs pagesTab">
+						<li class="active">
+							<a data-toggle="tab" href="#vhost">
+								<i></i>
+								云主机
+							</a>
+						</li>
+						<li>
+							<a data-toggle="tab" href="#vnum" id="Yupeie">
+								<i></i>
+								域配额
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div id="vhost" class="tab-pane fade in active">
+							<div id="hchart-column7" style="height:220px;"></div>
+						</div>
+						<div id="vnum" class="tab-pane fade">
+							<div id="hchart-column8" style="height:220px;"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+var scripts = [null,"js/highcharts.js"];
+
+$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
+	
+	$("#hchart-pie1").highcharts({
+		title: {
+			text: 'CPU：100核',
+			style:{
+				fontSize:'14px'
+			}
+		},
+		legend: {
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+		chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: null,
+		        plotShadow: false,
+		        type: 'pie'
+		},
+		colors:["#7266ba","#f9d21a"],
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		credits:{ 
+	    	enabled:false 
+	    },
+		plotOptions: {
+	        pie: {
+	            allowPointSelect: true,
+	            cursor: 'pointer',
+	            dataLabels: {
+	                enabled: false
+	            },
+	            showInLegend: true
+	        }
+	    },
+	    series: [{
+	        name: '占比',
+	        colorByPoint: true,
+	        data: [{
+	            name: '未用：60核',
+	            y: 60
+	        }, {
+	            name: '已用：40核',
+	            y: 40
+	        }]
+	    }]
+	});
+
+	$("#hchart-pie2").highcharts({
+		title: {
+			text: '内存：160G',
+			style:{
+				fontSize:'14px'
+			}
+		},
+		legend: {
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+		chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: null,
+		        plotShadow: false,
+		        type: 'pie'
+		},
+		colors:["#7266ba","#f9d21a"],
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		credits:{ 
+	    	enabled:false 
+	    },
+		plotOptions: {
+	        pie: {
+	            allowPointSelect: true,
+	            cursor: 'pointer',
+	            dataLabels: {
+	                enabled: false
+	            },
+	            showInLegend: true
+	        }
+	    },
+	    series: [{
+	        name: '占比',
+	        colorByPoint: true,
+	        data: [{
+	            name: '未用：80G',
+	            y: 50
+	        }, {
+	            name: '已用：80G',
+	            y: 50
+	        }]
+	    }]
+	});
+
+	$("#hchart-pie3").highcharts({
+		title: {
+			text: '存储：3000G',
+			style:{
+				fontSize:'14px'
+			}
+		},
+		legend: {
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+		chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: null,
+		        plotShadow: false,
+		        type: 'pie'
+		},
+		colors:["#7266ba","#f9d21a"], 
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		credits:{ 
+	    	enabled:false 
+	    },
+		plotOptions: {
+	        pie: {
+	            allowPointSelect: true,
+	            cursor: 'pointer',
+	            dataLabels: {
+	                enabled: false
+	            },
+	            showInLegend: true
+	        }
+	    },
+	    series: [{
+	        name: '占比',
+	        colorByPoint: true,
+	        data: [{
+	            name: '未用：1600G',
+	            y: 53.3
+	        }, {
+	            name: '已用：1400G',
+	            y: 46.7
+	        }]
+	    }]
+	});
+
+	$("#hchart-column1").highcharts({
+		chart: {
+            type: 'column'
+        },
+        title: {
+        	align:'left',
+            text: '云主机服务',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			verticalAlign:'top',
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+        colors:['#39bee8'],
+        xAxis: {
+            categories: [
+                'w34',
+                'yzss',
+                'possi',
+                '102发布',
+                '新纳管'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '单位 (个)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 个</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	text: '更多',
+            href: '#',
+            position: {
+                align: 'right',
+                x: -10,
+                verticalAlign: 'top',
+                y: 20
+            },
+            style:{
+            	color:'#52bde4'
+            }
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '申请数量',
+            data: [12, 7, 12, 18, 2]
+        }]
+    });
+
+    $("#hchart-column2").highcharts({
+		chart: {
+            type: 'column'
+        },
+        title: {
+        	align:'left',
+            text: '云硬盘服务',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			verticalAlign:'top',
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+        colors:['#39bee8'],
+        xAxis: {
+            categories: [
+                'yzt-1G',
+                'xmf云',
+                'gu321',
+                'aaaa'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '单位 (个)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat:  '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 个</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	text: '更多',
+            href: '#',
+            position: {
+                align: 'right',
+                x: -10,
+                verticalAlign: 'top',
+                y: 20
+            },
+            style:{
+            	color:'#52bde4'
+            }
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '申请数量',
+            data: [30, 21, 45, 3]
+        }]
+    })
+
+    $("#hchart-column3").highcharts({
+		chart: {
+            type: 'column'
+        },
+        title: {
+            text: '',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			verticalAlign:'top',
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+        colors:['#f9d21a','#39bee8','#7266ba'],
+        xAxis: {
+            categories: [
+                '云主机',
+                '云硬盘'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '单位 (个)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 个</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	enabled:false 
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        	{
+            	name: '已申请',
+            	data: [51, 99]
+        	},
+        	{
+	            name: '使用中',
+	            data: [48, 76]
+	        },
+        	{
+	            name: '已过期',
+	            data: [3, 23]
+	        }
+        ]
+    });
+
+
+    $("#hchart-line1").highcharts({
+    	chart: {
+            type: 'line'
+        },
+        title: {
+            text: '虚拟机申请',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			enabled:false
+        },
+        colors:['#39bee8'],
+        xAxis: {
+            categories: [
+                '1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '虚拟机 (个)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 个</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	enabled:false 
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        	{
+            	name: '虚拟机',
+            	data: [230,320,201,350,460,670,880,650,1221,620,230,120 ]
+        	}
+        ]
+    });
+
+
+    $("#hchart-line2").highcharts({
+    	chart: {
+            type: 'line'
+        },
+        title: {
+            text: '业务系统申请',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			enabled:false
+        },
+        colors:['#39bee8'],
+        xAxis: {
+            categories: [
+                '1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '业务系统 (个)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 个</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	enabled:false 
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        	{
+            	name: '业务系统',
+            	data: [230,320,201,350,460,670,880,650,1221,620,230,120 ]
+        	}
+        ]
+    });
+
+
+    $("#hchart-column4").highcharts({
+		chart: {
+            type: 'column'
+        },
+        title: {
+            text: '',
+			style:{
+				fontSize:"14px"
+			}
+        },
+		legend: {
+			verticalAlign:'top',
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+        colors:['#f9d21a','#39bee8'],
+        xAxis: {
+            categories: [
+                'ww102','不存在vlan','hgk102','yzt业务','hgk69','子域业务系统69','hhh','xmf69业务'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '单位 (个)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 个</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	text: '更多',
+            href: '#',
+            position: {
+                align: 'right',
+                x: -10,
+                verticalAlign: 'top',
+                y: 20
+            },
+            style:{
+            	color:'#52bde4'
+            }
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        	{
+            	name: '云主机',
+            	data: [2, 2, 2, 1, 3, 0, 4, 1]
+        	},
+        	{
+	            name: '云硬盘',
+	            data: [7, 4, 2, 1, 5, 0, 10, 2]
+	        }
+        ]
+    });
+
+
+    $("#hchart-column5").highcharts({
+		chart: {
+            type: 'column'
+        },
+        title: {
+        	align:'left',
+            text: '资源告警统计',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			verticalAlign:'top',
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+        colors:['#f9d21a'],
+        xAxis: {
+            categories: [
+                '云主机','配额告警'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '单位 (条)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 条</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	enabled:false
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        	{
+            	name: '告警数量',
+            	data: [2, 5]
+        	}
+        ]
+    });
+
+
+    $("#hchart-column6").highcharts({
+		chart: {
+            type: 'column'
+        },
+        title: {
+        	align:'left',
+            text: '业务配额告警统计',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			verticalAlign:'top',
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+        colors:['#7266ba'],
+        xAxis: {
+            categories: [
+                'CPU','内存','存储'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '单位 (条)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 条</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	enabled:false
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        	{
+            	name: '告警数量',
+            	data: [2, 5, 3]
+        	}
+        ]
+    });
+
+
+    $("#hchart-column7").highcharts({
+		chart: {
+            type: 'column'
+        },
+        title: {
+        	align:'left',
+            text: '',
+			style:{
+				fontSize:'14px'
+			}
+        },
+		legend: {
+			verticalAlign:'top',
+            itemStyle: {
+                fontWeight: 'normal'
+            }
+        },
+        colors:['#f9d21a','#39bee8'],
+        xAxis: {
+            categories: [
+                '施工失败','wfg123','申请软件','yzt100','施工失败','wfg123','申请软件','yzt100','施工失败','wfg123'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '单位 (条)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 条</b></td></tr></tbody></table>',
+            shared: true,
+            useHTML: true
+        },
+		credits:{ 
+	    	enabled:false
+	    },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        	{
+            	name: '告警数量',
+            	data: [2, 5, 3, 4,2, 5, 3, 4,2, 5]
+        	}
+        ]
+    });
+
+	$("#Yupeie").one('click',function(){
+		setTimeout(function(){
+			$("#hchart-column8").highcharts({
+				chart: {
+		            type: 'column'
+		        },
+		        title: {
+		        	align:'left',
+		            text: '',
+					style:{
+						fontSize:'14px'
+					}
+		        },
+				legend: {
+					verticalAlign:'top',
+		            itemStyle: {
+		                fontWeight: 'normal'
+		            }
+		        },
+		        colors:['#f9d21a','#39bee8'],
+		        xAxis: {
+		            categories: [
+		                '施工失败','wfg123','申请软件','yzt100','施工失败','wfg123','申请软件','yzt100','施工失败','wfg123'
+		            ]
+		        },
+		        yAxis: {
+		            min: 0,
+		            title: {
+		                text: '单位 (条)'
+		            }
+		        },
+		        tooltip: {
+		            headerFormat: '<span style="font-size:10px">{point.key}</span>',
+		            pointFormat: '<table><tbody><tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y} 条</b></td></tr></tbody></table>',
+		            shared: true,
+		            useHTML: true
+		        },
+				credits:{ 
+			    	enabled:false
+			    },
+		        plotOptions: {
+		            column: {
+		                pointPadding: 0.2,
+		                borderWidth: 0
+		            }
+		        },
+		        series: [
+		        	{
+		            	name: '告警数量',
+		            	data: [2, 5, 3, 4,2, 5, 3, 4,2, 5]
+		        	}
+		        ]
+		    });
+		},200);
+	});
+	
+});
+</script>

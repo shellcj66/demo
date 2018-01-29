@@ -1,0 +1,790 @@
+<div class="tabtable tab-container">
+	<ul class="nav nav-tabs pagesTab" id="ProductlistTab">
+		<li class="active">
+			<a data-toggle="tab" href="#vhost">
+				<i></i>
+				云主机
+			</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#vdisc">
+				<i></i>
+				云硬盘
+			</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#temp">
+				<i></i>
+				模板
+			</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#resrecovery">
+				<i></i>
+				资源回收
+			</a>
+		</li>
+		<li>
+			<a data-toggle="tab" href="#ippool">
+				<i></i>
+				资源回收
+			</a>
+		</li>
+	</ul>
+	
+	<div class="tab-content">
+		<div id="vhost" class="tab-pane fade in active">
+			<form class="form-inline">
+				<label href="javascript:void(0);" class="btn btn-info adv-filter-btn" onclick="switchFilter(this)">高级筛选 <span class="fa fa-caret-down"></span></label>
+            	<div class="single-search-box" style="float:right;margin-left:10px;">
+					<span class="single-search glyphicon glyphicon-search"></span>
+			        <input type="text" class="form-control" placeholder="请输入关键字">
+			    </div>
+	            <div class="" style="float:right;margin-left:10px;">资源：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="" style="float:right;">云主机：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="clearfix"></div>
+	        </form>
+	        <div class="panel panel-default adv-filter hide"> 
+		        <div class="panel-heading">
+			        <form class="form-horizontal">
+						<ul>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">申请人：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单编号：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">服务实例名称：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单类型：</label>
+								<div class="col-sm-8">
+						            <select class="form-control" style="float:right;">
+									  <option>全部</option>
+									  <option>有效时间变更</option>
+									</select>
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单时间：</label>
+								<div class="col-sm-8 input-group" style="padding:0 15px;">
+						            <!--<input class="form-control laydate-icon" onclick="laydate({format: 'YYYY-MM-DD'})">-->
+						            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+					                <span class="input-group-btn">
+					                	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+					                </span>
+						        </div>
+						    </li>
+						    <li>
+						    	<div class="col-sm-8">
+									<button type="button" class="btn btn-info">搜索</button>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+			        </form>
+		        </div>
+			</div>
+	        <table class="table table-striped" style="margin-top:20px;">
+	          <thead>
+	            <tr>
+	              <th>云主机名称</th>
+	              <th>状态</th>
+	              <th>所属业务域</th>
+	              <th >所属业务系统</th>
+	              <th >CPU</th>
+	              <th >内存</th>
+	              <th >存储</th>
+	              <th >IP</th>
+	              <th >失效时间</th>
+	              <th >资源状态</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	             <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	          </tbody>
+	        </table>
+        </div>
+        <div id="vdisc" class="tab-pane fade">
+			<form class="form-inline">
+				<label href="javascript:void(0);" class="btn btn-info adv-filter-btn" onclick="switchFilter(this)">高级筛选 <span class="fa fa-caret-down"></span></label>
+            	<div class="single-search-box" style="float:right;margin-left:10px;">
+					<span class="single-search glyphicon glyphicon-search"></span>
+			        <input type="text" class="form-control" placeholder="请输入关键字">
+			    </div>
+	            <div class="" style="float:right;margin-left:10px;">资源：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="" style="float:right;">云主机：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="clearfix"></div>
+	        </form>
+	        <div class="panel panel-default adv-filter hide"> 
+		        <div class="panel-heading">
+			        <form class="form-horizontal">
+						<ul>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">申请人：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单编号：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">服务实例名称：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单类型：</label>
+								<div class="col-sm-8">
+						            <select class="form-control" style="float:right;">
+									  <option>全部</option>
+									  <option>有效时间变更</option>
+									</select>
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单时间：</label>
+								<div class="col-sm-8 input-group" style="padding:0 15px;">
+						            <!--<input class="form-control laydate-icon" onclick="laydate({format: 'YYYY-MM-DD'})">-->
+						            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+					                <span class="input-group-btn">
+					                	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+					                </span>
+						        </div>
+						    </li>
+						    <li>
+						    	<div class="col-sm-8">
+									<button type="button" class="btn btn-info">搜索</button>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+			        </form>
+		        </div>
+			</div>
+	        <table class="table table-striped" style="margin-top:20px;">
+	          <thead>
+	            <tr>
+	              <th>云主机名称</th>
+	              <th>状态</th>
+	              <th>所属业务域</th>
+	              <th >所属业务系统</th>
+	              <th >CPU</th>
+	              <th >内存</th>
+	              <th >存储</th>
+	              <th >IP</th>
+	              <th >失效时间</th>
+	              <th >资源状态</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	             <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	          </tbody>
+	        </table>
+        </div>
+        <div id="temp" class="tab-pane fade">
+			<form class="form-inline">
+				<label href="javascript:void(0);" class="btn btn-info adv-filter-btn" onclick="switchFilter(this)">高级筛选 <span class="fa fa-caret-down"></span></label>
+            	<div class="single-search-box" style="float:right;margin-left:10px;">
+					<span class="single-search glyphicon glyphicon-search"></span>
+			        <input type="text" class="form-control" placeholder="请输入关键字">
+			    </div>
+	            <div class="" style="float:right;margin-left:10px;">资源：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="" style="float:right;">云主机：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="clearfix"></div>
+	        </form>
+	        <div class="panel panel-default adv-filter hide"> 
+		        <div class="panel-heading">
+			        <form class="form-horizontal">
+						<ul>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">申请人：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单编号：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">服务实例名称：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单类型：</label>
+								<div class="col-sm-8">
+						            <select class="form-control" style="float:right;">
+									  <option>全部</option>
+									  <option>有效时间变更</option>
+									</select>
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单时间：</label>
+								<div class="col-sm-8 input-group" style="padding:0 15px;">
+						            <!--<input class="form-control laydate-icon" onclick="laydate({format: 'YYYY-MM-DD'})">-->
+						            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+					                <span class="input-group-btn">
+					                	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+					                </span>
+						        </div>
+						    </li>
+						    <li>
+						    	<div class="col-sm-8">
+									<button type="button" class="btn btn-info">搜索</button>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+			        </form>
+		        </div>
+			</div>
+	        <table class="table table-striped" style="margin-top:20px;">
+	          <thead>
+	            <tr>
+	              <th>云主机名称</th>
+	              <th>状态</th>
+	              <th>所属业务域</th>
+	              <th >所属业务系统</th>
+	              <th >CPU</th>
+	              <th >内存</th>
+	              <th >存储</th>
+	              <th >IP</th>
+	              <th >失效时间</th>
+	              <th >资源状态</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	             <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	          </tbody>
+	        </table>
+        </div>
+        <div id="resrecovery" class="tab-pane fade">
+			<form class="form-inline">
+				<label href="javascript:void(0);" class="btn btn-info adv-filter-btn" onclick="switchFilter(this)">高级筛选 <span class="fa fa-caret-down"></span></label>
+            	<div class="single-search-box" style="float:right;margin-left:10px;">
+					<span class="single-search glyphicon glyphicon-search"></span>
+			        <input type="text" class="form-control" placeholder="请输入关键字">
+			    </div>
+	            <div class="" style="float:right;margin-left:10px;">资源：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="" style="float:right;">云主机：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="clearfix"></div>
+	        </form>
+	        <div class="panel panel-default adv-filter hide"> 
+		        <div class="panel-heading">
+			        <form class="form-horizontal">
+						<ul>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">申请人：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单编号：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">服务实例名称：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单类型：</label>
+								<div class="col-sm-8">
+						            <select class="form-control" style="float:right;">
+									  <option>全部</option>
+									  <option>有效时间变更</option>
+									</select>
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单时间：</label>
+								<div class="col-sm-8 input-group" style="padding:0 15px;">
+						            <!--<input class="form-control laydate-icon" onclick="laydate({format: 'YYYY-MM-DD'})">-->
+						            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+					                <span class="input-group-btn">
+					                	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+					                </span>
+						        </div>
+						    </li>
+						    <li>
+						    	<div class="col-sm-8">
+									<button type="button" class="btn btn-info">搜索</button>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+			        </form>
+		        </div>
+			</div>
+	        <table class="table table-striped" style="margin-top:20px;">
+	          <thead>
+	            <tr>
+	              <th>云主机名称</th>
+	              <th>状态</th>
+	              <th>所属业务域</th>
+	              <th >所属业务系统</th>
+	              <th >CPU</th>
+	              <th >内存</th>
+	              <th >存储</th>
+	              <th >IP</th>
+	              <th >失效时间</th>
+	              <th >资源状态</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	             <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	          </tbody>
+	        </table>
+        </div>
+        <div id="ippool" class="tab-pane fade">
+			<form class="form-inline">
+				<label href="javascript:void(0);" class="btn btn-info adv-filter-btn" onclick="switchFilter(this)">高级筛选 <span class="fa fa-caret-down"></span></label>
+            	<div class="single-search-box" style="float:right;margin-left:10px;">
+					<span class="single-search glyphicon glyphicon-search"></span>
+			        <input type="text" class="form-control" placeholder="请输入关键字">
+			    </div>
+	            <div class="" style="float:right;margin-left:10px;">资源：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="" style="float:right;">云主机：
+	               <select class="form-control">
+	                  <option value="AK">Alaska</option>
+	                  <option value="HI">Hawaii</option>
+	                  <option value="CA">California</option>
+	                  <option value="NV">Nevada</option>
+	                  <option value="OR">Oregon</option>
+	                  <option value="WA">Washington</option>
+	                </select>
+	            </div>
+	            <div class="clearfix"></div>
+	        </form>
+	        <div class="panel panel-default adv-filter hide"> 
+		        <div class="panel-heading">
+			        <form class="form-horizontal">
+						<ul>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">申请人：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单编号：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">服务实例名称：</label>
+								<div class="col-sm-8">
+						          <input type="text" class="form-control">
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单类型：</label>
+								<div class="col-sm-8">
+						            <select class="form-control" style="float:right;">
+									  <option>全部</option>
+									  <option>有效时间变更</option>
+									</select>
+						        </div>
+							</li>
+							<li>
+								<label class="col-sm-4 control-label" style="text-align:left;">订单时间：</label>
+								<div class="col-sm-8 input-group" style="padding:0 15px;">
+						            <!--<input class="form-control laydate-icon" onclick="laydate({format: 'YYYY-MM-DD'})">-->
+						            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+					                <span class="input-group-btn">
+					                	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+					                </span>
+						        </div>
+						    </li>
+						    <li>
+						    	<div class="col-sm-8">
+									<button type="button" class="btn btn-info">搜索</button>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+			        </form>
+		        </div>
+			</div>
+	        <table class="table table-striped" style="margin-top:20px;">
+	          <thead>
+	            <tr>
+	              <th>云主机名称</th>
+	              <th>状态</th>
+	              <th>所属业务域</th>
+	              <th >所属业务系统</th>
+	              <th >CPU</th>
+	              <th >内存</th>
+	              <th >存储</th>
+	              <th >IP</th>
+	              <th >失效时间</th>
+	              <th >资源状态</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	             <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	              <tr>
+	                <td>yzt102Vmware</td>
+	                <td>已关机</td>
+	                <td>yzt</td>
+	                <td>yzt业务系统</td>
+	                <td>1</td>
+	                <td>2GB</td>
+	                <td>19.7GB</td>
+	                <td>192.168.208.5</td>
+	                <td>2015-10-21</td>
+	                <td>正常</td>
+	              </tr>
+	          </tbody>
+	        </table>
+        </div>
+	</div>
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a>云主机</a>
+  </li>
+  <li>
+    <a data-url="page/resource/operationstorage" href="index.html#page/resource/operationstorage" >云硬盘</a>
+  </li>
+  <li>
+    <a data-url="page/resource/template" href="index.html#page/resource/template"  >模板</a>
+  </li>
+  <li>
+    <a data-url="page/resource/resourcesrecovery" href="index.html#page/resource/resourcesrecovery"  >资源回收</a>
+  </li>
+  <li>
+    <a data-url="page/resource/ippool" href="index.html#page/resource/ippool" >IP池</a>
+  </li>
+</ul>

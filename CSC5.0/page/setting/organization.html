@@ -1,0 +1,102 @@
+<title>组织架构 --CSC</title>
+<div class="wrapper-md bg-white">
+	<div class="row">
+		<div class="col-xs-12">
+			<div>
+		        <span>
+		          	<div class="btn-box form-inline">
+	          			<button class="btn btn-info btn-sm">同步AD域组织</button>
+	          			<button class="btn btn-info btn-sm">新增同级</button>
+	          			<button class="btn btn-info btn-sm" onclick="showModal('page/setting/organization-new.html')">新增下级</button>
+	          			<button class="btn btn-info btn-sm">修改</button>
+	          			<button class="btn btn-default btn-sm">删除</button>
+		          	</div>
+		          
+		        </span>
+		    </div>
+		    <p></p>
+			<div>
+				<ul id="organizationTree" class="ztree"></ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="contextMenu" style="display:none">
+	<div class="contextmenu">
+		<ul>
+			<li>
+				<a>新增同级</a>
+			</li>
+			<li>
+				<a onclick="showModal('page/setting/organization-new.html')">新增下级</a>
+			</li>
+			<li>
+				<a href="">修改</a>
+			</li>
+			<li>
+				<a href="">删除</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+
+	var scripts = [null,"js/ztree/js/ztree.js",null];
+
+	$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
+		var tempData = [
+		    { name:"组织目录", open:true,iconSkin:'tree_root',
+		      children: [
+		        { name:"总裁办",iconSkin:'tree_leaf'},
+		        { name:"市场部",iconSkin:'tree_leaf'},
+		        { name:"财务部",iconSkin:'tree_leaf'},
+		        { name:"人事部",iconSkin:'tree_leaf'},
+		        { name:"研发部",iconSkin:'tree_leaf',open:true,
+				    children: [
+				        { name:"开发组",iconSkin:'tree_leaf'},
+				        { name:"虚拟开发组",iconSkin:'tree_leaf'},
+				        { name:"前端开发组",iconSkin:'tree_leaf'}
+				    ]}
+		    ]}
+		];
+
+		var setting = {
+			callback: {
+				beforeCollapse: function(){
+					//return false
+				}
+			}
+		};
+
+		$.fn.zTree.init($('ul#organizationTree'), setting, tempData);
+
+		$('ul#organizationTree').on("contextmenu",function(e){
+			
+			var e = e || window.event;
+			var $target = $(e.target);
+
+			var pos = getMousePos(e);
+
+			if ($target.parents("a").length > 0) {
+				$("body > .contextmenu").remove();
+				$("body").append($("#contextMenu").html()).bind("click.close-contextmenu",function(){
+					$("body > .contextmenu").remove();
+				});
+				$("body > .contextmenu").css({
+					"left":pos.x,
+					"top":pos.y
+				});
+			};
+			return false;
+		});
+
+		function addTreeNode(newNode){
+			var treeObj = $.fn.zTree.getZTreeObj("organizationTree");
+			var nodes = treeObj.getSelectedNodes();
+			newNode = treeObj.addNodes(nodes[0], newNode);
+		}
+
+		$("#organizationTree").data({"addTreeNode":addTreeNode});
+		
+	});
+</script>

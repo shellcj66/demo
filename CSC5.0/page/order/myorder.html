@@ -1,0 +1,226 @@
+<title>我的订单</title>
+<div class="tabtable tab-container">
+	<ul class="nav nav-tabs pagesTab" id="OrderTab">
+		<li class="active">
+			<a data-toggle="tab" href="#v-con">
+				<i></i>
+				我的订单
+			</a>
+		</li>
+	</ul>
+	
+	<div class="tab-content" style="position:relative;">
+
+		<form class="form-inline">
+			<label href="javascript:void(0);" class="btn btn-info adv-filter-btn" onclick="switchFilter(this)">高级筛选 <span class="fa fa-caret-down"></span></label>
+			<div class="single-search-box" style="float:right;margin-left:10px;">
+  				<span class="single-search glyphicon glyphicon-search"></span>
+		        <input type="text" class="form-control" placeholder="请输入账单编码">
+		    </div>
+		    <div class="" style="float:right;margin-left:10px;">
+               <select class="form-control">
+                  <option value="AK">Alaska</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="CA">California</option>
+                  <option value="NV">Nevada</option>
+                  <option value="OR">Oregon</option>
+                  <option value="WA">Washington</option>
+                </select>
+            </div>
+            <div class="" style="float:right;">
+               <select class="form-control">
+                  <option value="AK">Alaska</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="CA">California</option>
+                  <option value="NV">Nevada</option>
+                  <option value="OR">Oregon</option>
+                  <option value="WA">Washington</option>
+                </select>
+            </div>
+			<div class="clearfix"></div>
+		</form>
+		<div class="panel panel-default adv-filter hide"> 
+	        <div class="panel-heading">
+		        <form class="form-horizontal">
+					<ul>
+						<li>
+							<label class="col-sm-4 control-label" style="text-align:left;">订单编号：</label>
+							<div class="col-sm-8">
+					          <input type="text" class="form-control">
+					        </div>
+						</li>
+						<li>
+							<label class="col-sm-4 control-label" style="text-align:left;">订单编号：</label>
+							<div class="col-sm-8">
+					          <input type="text" class="form-control">
+					        </div>
+						</li>
+						<li>
+							<label class="col-sm-4 control-label" style="text-align:left;">服务实例名称：</label>
+							<div class="col-sm-8">
+					          <input type="text" class="form-control">
+					        </div>
+						</li>
+						<li>
+							<label class="col-sm-4 control-label" style="text-align:left;">订单类型：</label>
+							<div class="col-sm-8">
+					            <select class="form-control" style="float:right;">
+								  <option>全部</option>
+								  <option>有效时间变更</option>
+								</select>
+					        </div>
+						</li>
+						<li>
+							<label class="col-sm-4 control-label" style="text-align:left;">订单时间：</label>
+							<div class="col-sm-8 input-group" style="padding:0 15px;">
+					            <!--<input class="form-control laydate-icon" onclick="laydate({format: 'YYYY-MM-DD'})">-->
+					            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+				                <span class="input-group-btn">
+				                	<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+				                </span>
+					        </div>
+					    </li>
+					    <li>
+					    	<div class="col-sm-8">
+								<button type="button" class="btn btn-info">搜索</button>
+							</div>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+		        </form>
+	        </div>
+		</div>
+		
+		<div class="table-responsive">
+			<table class="table table-striped" style="margin-top:20px;">
+			    <thead>
+			      <tr>
+			        <th>订单编号</th>
+			        <th>流程跟踪</th>
+			        <th>订单状态</th>
+			        <th>申请人</th>
+			        <th>实例数量</th>
+			        <th>服务实例名称</th>
+			        <th>订单日期</th>
+			        <th>订单类型</th>
+			        <th>施工状态</th>
+			        <th>操作</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td><a data-url="page/order/backlogorder" href="index.html#page/order/order-detail">OS20150901150018913</a></td>
+			        <td>流程跟踪</td>
+			        <td><span class="label label-warning">待审核</span></td>
+			        <td>xmf91</td>
+			        <td>1</td>
+			        <td>91pvm0901</td>
+			        <td>2015-09-09 15:05:02</td>
+			        <td>施工中</td>
+			        <td>资源申请</td>
+			        <td>
+						<a class="btn btn-info btn-minier">修改</a>
+						<a class="btn btn-default btn-minier">删除</a>
+			        </td>
+			      </tr>
+			      <tr>
+			        <td>OS20150901150018913</td>
+			        <td>流程跟踪</td>
+			        <td><span class="label label-warning">待审核</span></td>
+			        <td>xmf91</td>
+			        <td>1</td>
+			        <td>91pvm0901</td>
+			        <td>2015-09-09 15:05:02</td>
+			        <td>施工中</td>
+			        <td>资源申请</td>
+			        <td>
+						<a class="btn btn-info btn-minier">修改</a>
+						<a class="btn btn-default btn-minier">删除</a>
+			        </td>
+			      </tr>
+			      <tr>
+			        <td>OS20150901150018913</td>
+			        <td>流程跟踪</td>
+			        <td><span class="label label-warning">待审核</span></td>
+			        <td>xmf91</td>
+			        <td>1</td>
+			        <td>91pvm0901</td>
+			        <td>2015-09-09 15:05:02</td>
+			        <td>施工中</td>
+			        <td>资源申请</td>
+			        <td>
+						<a class="btn btn-info btn-minier">修改</a>
+						<a class="btn btn-default btn-minier">删除</a>
+			        </td>
+			      </tr>
+			      <tr>
+			        <td>OS20150901150018913</td>
+			        <td>流程跟踪</td>
+			        <td><span class="label label-warning">待审核</span></td>
+			        <td>xmf91</td>
+			        <td>1</td>
+			        <td>91pvm0901</td>
+			        <td>2015-09-09 15:05:02</td>
+			        <td>施工中</td>
+			        <td>资源申请</td>
+			        <td>
+						<a class="btn btn-info btn-minier">修改</a>
+						<a class="btn btn-default btn-minier">删除</a>
+			        </td>
+			      </tr>
+			      <tr>
+			        <td>OS20150901150018913</td>
+			        <td>流程跟踪</td>
+			        <td><span class="label label-warning">待审核</span></td>
+			        <td>xmf91</td>
+			        <td>1</td>
+			        <td>91pvm0901</td>
+			        <td>2015-09-09 15:05:02</td>
+			        <td>施工中</td>
+			        <td>资源申请</td>
+			        <td>
+						<a class="btn btn-info btn-minier">修改</a>
+						<a class="btn btn-default btn-minier">删除</a>
+			        </td>
+			      </tr>
+			      <tr>
+			        <td>OS20150901150018913</td>
+			        <td>流程跟踪</td>
+			        <td><span class="label label-warning">待审核</span></td>
+			        <td>xmf91</td>
+			        <td>1</td>
+			        <td>91pvm0901</td>
+			        <td>2015-09-09 15:05:02</td>
+			        <td>施工中</td>
+			        <td>资源申请</td>
+			        <td>
+						<a class="btn btn-info btn-minier">修改</a>
+						<a class="btn btn-default btn-minier">删除</a>
+			        </td>
+			      </tr>
+			    </tbody>
+			</table>
+		</div>
+
+		<nav>
+		  <ul class="pagination" style="margin:0;">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true"><<</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>···</li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">>></span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	</div>	
+</div>
